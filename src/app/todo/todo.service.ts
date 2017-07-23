@@ -13,7 +13,7 @@ export class TodoService {
 
   get(query = '') {
     return new Promise(resolve => {
-      var data;
+      let data;
       if (query === 'completed' || query === 'active') {
         const isCompleted = query === 'completed';
         data = todos.filter(todo => todo.isDone === isCompleted);
